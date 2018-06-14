@@ -5,8 +5,25 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
 <title>Insert title here</title>
+<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+<script>
+	$(document).ready(function(){
+		$("#input").click(function(){
+			$(location).attr("href","input.jsp");
+		})
+		$("#output").click(function(){
+			$(location).attr("href","output.jsp");
+		})
+	})
+</script>
 </head>
 <body>
-index
+	<table border=1 align=center>
+		<tr><td colspan=2 style="text-align:center">messages</td></tr>
+		<tr>
+		<td><button id=input>input</button></td>
+		<td><button id=output>output</button></td>
+		</tr>
+	</table>
 </body>
 </html>
