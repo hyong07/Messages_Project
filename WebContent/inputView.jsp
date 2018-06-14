@@ -12,11 +12,13 @@
 		<c:when test="${insert_result > 0}">
 			<script>
 				alert("input success");
+				location.href = "index.jsp";
 			</script>
 		</c:when>
 		<c:otherwise>
 			<script>
-				alert("input failed");			
+				alert("input failed");
+				location.href = "index.jsp";
 			</script>
 		</c:otherwise>
 	</c:choose>
