@@ -16,7 +16,7 @@ import org.apache.jasper.tagplugins.jstl.core.Catch;
 import kh.web.messagesDAO.MessagesDAO;
 import kh.web.messagesDTO.MessagesDTO;
 
-@WebServlet("*do")
+@WebServlet("*.do")
 public class FrontController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 

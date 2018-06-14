@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
-<title>Insert title here</title>
+<title>Input your Info</title>
 </head>
 <body>
 	<form action="input.do" method="get">
@@ -12,7 +12,7 @@
 			<tr><td colspan=2 style="text-align:center">input information</td></tr>
 			<tr>
 			<td>Id</td>
-			<td><input type="text" name="message_id"></td>
+			<td><input type="text" name="id"></td>
 			</tr>
 			<tr>
 			<td>Name</td>
