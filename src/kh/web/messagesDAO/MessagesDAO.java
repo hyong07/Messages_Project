@@ -14,12 +14,14 @@ public class MessagesDAO {
 	
 	public int insertData(MessagesDTO dto) throws Exception {
 		Connection con = DButils.getConnection();
-		String sql = "insert into messages values(?,?,?)";
+		String sql = "insert into messages values(messages_seq.nextval,?,?)";
 		PreparedStatement pstat = con.prepareStatement(sql);
-		pstat.setString(1, dto.getMessage_id());
-		pstat.setString(2, dto.getName());
-		pstat.setString(3, dto.getMessage());
+		
+		pstat.setString(1, dto.getName());
+		pstat.setString(2, dto.getMessage());
 		int insert_result = pstat.executeUpdate();
+		
+		System.out.println(insert_result);
 		
 		con.commit();
 		con.close();

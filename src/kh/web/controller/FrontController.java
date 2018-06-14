@@ -37,11 +37,13 @@ public class FrontController extends HttpServlet {
 			String id = request.getParameter("id");
 			String name = request.getParameter("name");
 			String message = request.getParameter("message");
-			
+		
 		//  ------------------ DB insert 연결  ------------------------
 			MessagesDTO msgDto = new MessagesDTO(id,name,message);
-
+			System.out.println(msgDto.getMessage_id() + " : " + msgDto.getName() + " : " + msgDto.getMessage() );
 			int result = msgDao.insertData(msgDto);
+			
+			
 			//  ---------------- DB 연결 끝 ------------------------
 			
 			//  ---------------- FrontEnd 값 보내주는 코드  ------------------------
